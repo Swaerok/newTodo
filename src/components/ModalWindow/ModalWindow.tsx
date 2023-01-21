@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { DarkSide, EditingButton, EditingWindow } from '.';
+import { DarkSide, EditingButton, EditingWindow } from './styled';
 import { deactivateModal, updateTodoText } from '../../redux/slices/todoSlice';
 import { useAppDispatch } from '../../redux/store';
 
@@ -19,14 +19,12 @@ const ModalWindow: React.FC<ModalWindowProps> = ({ id, text }) => {
     dispatch(deactivateModal(false));
   };
   const updateTodo = () => {
-    console.log(id);
     if (id) {
       dispatch(updateTodoText({ id: id, text: modalValue }));
       dispatch(deactivateModal(false));
     }
   };
   useEffect(() => {
-    console.log(1);
     inputRef.current?.focus();
   }, []);
 

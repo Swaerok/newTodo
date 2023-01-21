@@ -1,19 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-type ModalWindowType = {
-  id: number | null;
-  text: string;
-  active: boolean;
-};
-type TodoTasktype = {
-  id: number;
-  text: string;
-  completedStatus?: boolean;
-};
-interface TodoSliceState {
-  modalWindow: ModalWindowType;
-  todos: TodoTasktype[];
-}
+import { TodoSliceState, TodoTasktype } from '../types/types';
 
 const initialState: TodoSliceState = {
   modalWindow: {

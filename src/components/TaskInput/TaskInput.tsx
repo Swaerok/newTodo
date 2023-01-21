@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TaskInputer } from '.';
+import { TaskInputer } from './styled';
 import { BsInputCursor } from 'react-icons/bs';
 import { addTodo } from '../../redux/slices/todoSlice';
 import { useAppDispatch } from '../../redux/store';
@@ -13,7 +13,7 @@ const TaskInput: React.FC = () => {
   };
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setCustomId(customId + 1);
+    setCustomId((prev) => prev + 1);
     dispatch(addTodo({ text: value, id: customId }));
     setValue('');
   };

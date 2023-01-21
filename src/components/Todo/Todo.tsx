@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckBox, TodoItem } from '.';
+import { CheckBox, TodoItem } from './styled';
 import { BsFillPencilFill } from 'react-icons/bs';
 import { AiFillDelete } from 'react-icons/ai';
 import { useAppDispatch } from '../../redux/store';
@@ -25,7 +25,7 @@ const Todo: React.FC<TodoPropType> = ({ id, text, completedStatus }) => {
       <CheckBox
         checked={checked}
         onClick={() => {
-          setChecked(!checked);
+          setChecked((prev) => !prev);
           changeStatus();
         }}
       />

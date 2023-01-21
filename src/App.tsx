@@ -20,8 +20,8 @@ const App: React.FC = () => {
         <Head />
         <TaskInput />
         <ButtonCotainer>
-          <ClearButton func={() => dispatch(clearTodos())} title="Clear All" />
-          <ClearButton func={() => dispatch(deleteCompleted())} title="Clear Completed" />
+          <ClearButton onClick={() => dispatch(clearTodos())} title="Clear All" />
+          <ClearButton onClick={() => dispatch(deleteCompleted())} title="Clear Completed" />
         </ButtonCotainer>
         <TodoField />
       </Container>

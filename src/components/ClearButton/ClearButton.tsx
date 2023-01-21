@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from '.';
-type ClearButtonProps = {
+import { Button } from './styled';
+interface ClearButtonProps {
   title: string;
-  func: () => void;
-};
-const ClearButton: React.FC<ClearButtonProps> = ({ title, func }) => {
-  return <Button onClick={func}>{title}</Button>;
+  onClick: () => void;
+}
+const ClearButton: React.FC<ClearButtonProps> = ({ title, onClick }) => {
+  return <Button onClick={onClick}>{title}</Button>;
 };
 
 export default ClearButton;

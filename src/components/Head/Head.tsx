@@ -1,7 +1,7 @@
 import React from 'react';
 import { GrCatalogOption } from 'react-icons/gr';
 import { BiLogOutCircle } from 'react-icons/bi';
-import { HeaderBar, HeaderIcon } from '.';
+import { HeaderBar, HeaderIcon } from './styled';
 
 const Head: React.FC = () => {
   return (
